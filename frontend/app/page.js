@@ -9,7 +9,7 @@ export default function Home() {
 
   // 1. 게시글 목록 불러오기 (Read)
   useEffect(() => {
-    fetch('http://localhost:8080/api/guestbooks')
+    fetch('http://15.164.232.113:8080/api/guestbooks')
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error("데이터 로드 실패:", err));
@@ -24,7 +24,7 @@ export default function Home() {
     }
 
     try {
-      const res = await fetch('http://localhost:8080/api/guestbooks', {
+      const res = await fetch('http://15.164.232.113:8080/api/guestbooks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

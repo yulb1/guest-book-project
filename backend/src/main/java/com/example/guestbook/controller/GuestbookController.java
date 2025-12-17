@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/guestbooks")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class GuestbookController {
 
     private final GuestbookRepository guestbookRepository;
