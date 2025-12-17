@@ -32,3 +32,6 @@ yarn-error.log*
 db/
 db/data/
 **/*.sock
+
+# --- Security ---
+.env
