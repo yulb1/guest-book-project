@@ -18,7 +18,7 @@
 
 | 분류         | 기술                        | 설명                                                   |
 | :----------- | :-------------------------- | :----------------------------------------------------- |
-| **Frontend** | **Next.js** (Node.js 20)    | SSR/CSR 하이브리드 렌더링, `fetch`를 통한 비동기 통신  |
+| **Frontend** | **Next.js** (JavaScript)    | 사용자 화면 구성, `fetch`를 통한 비동기 통신  |
 | **Backend**  | **Spring Boot** (Java 21)   | RESTful API 구현, Spring Data JPA를 이용한 데이터 접근 |
 | **Database** | **MySQL 8.0**               | 영구적인 데이터 저장을 위한 RDBMS                      |
 | **Infra**    | **AWS EC2** (Amazon Linux)  | 클라우드 컴퓨팅 환경 구축                              |
