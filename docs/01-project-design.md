@@ -24,7 +24,7 @@
 
 ## 4. 백엔드 역할
 
-- **기술 스택:** Spring Boot, Spring Data JPA
+- **기술 스택:** Java (21), Spring Boot (3.4.12), Spring Data JPA
 - **주요 책임:**
   - RESTful API 엔드포인트(`GET /api/guestbooks`, `POST /api/guestbooks`)를 제공.
   - CORS 설정을 통해 프론트엔드의 접근을 허용.
