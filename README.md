@@ -9,6 +9,7 @@
 
 > **"방문자들이 서로의 목표와 다짐을 공유할 수 있는 웹 방명록 서비스"** > 개발부터 클라우드 배포, 그리고 CI/CD 자동화까지 풀스택 개발의 전 과정을 경험하기 위해 제작된 프로젝트입니다.
 <img width="720" height="382" alt="Image" src="https://github.com/user-attachments/assets/fb5798d3-1b1c-46fe-9e6b-4248d0ffd3e7" />
+
 ---
 
 ## 아키텍처 (Architecture)
