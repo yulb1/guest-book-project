@@ -25,6 +25,20 @@
 | **DevOps**   | **Docker & Docker Compose** | 컨테이너 기반의 격리된 실행 환경 구성                  |
 | **CI/CD**    | **GitHub Actions**          | 코드 푸시 시 자동 빌드 및 배포 파이프라인 구축         |
 
+## 📂 디렉토리 구조 (Directory Structure)
+```text
+guest-book-project
+├── .github/workflows    # GitHub Actions 배포 스크립트
+├── backend              # Spring Boot 서버
+│   ├── src/main/java    # Java 소스 코드
+│   └── Dockerfile       # 백엔드 이미지 빌드 설정
+├── frontend             # Next.js 클라이언트
+│   ├── app              # 페이지 라우팅 및 컴포넌트
+│   └── Dockerfile       # 프론트엔드 이미지 빌드 설정
+├── docker-compose.yml   # 컨테이너 오케스트레이션 설정
+└── README.md            # 프로젝트 설명서
+```
+
 ### 🔄 시스템 구조
 
 1. **User:** 브라우저를 통해 EC2의 `3000`번 포트(Frontend)에 접속
