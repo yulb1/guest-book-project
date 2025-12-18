@@ -48,6 +48,14 @@ guest-book-project
 
 ---
 
+##  API 명세서 (API Specification)
+
+| Method | URI | Description | Request Body |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/api/guestbooks` | 모든 글 목록 조회 | - |
+| **POST** | `/api/guestbooks` | 새로운 글 등록 | `{"author": "이름", "content": "내용"}` |
+
+---
 ## 주요 기능 (Features)
 
 - **방명록 조회 (Read):** 저장된 모든 다짐 목록을 최신순으로 조회.
