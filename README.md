@@ -70,5 +70,3 @@
   ```text
   (index):1 Access to fetch at '[http://43.201.xx.xx:8080/api/guestbooks](http://43.201.xx.xx:8080/api/guestbooks)' from origin ... has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present...
   ```
-
-* ---
