@@ -58,16 +58,12 @@
 
 ### 3. Docker 실행 순서 문제 (Race Condition)
 
+- **문제:** `docker-compose up` 실행 시, MySQL이 켜지기 전에 백엔드가 먼저 실행되어 DB 연결 실패로 종료됨.
+- **해결:** `docker-compose.yml`의 백엔드 설정에 `restart: on-failure` 옵션을 추가하여, DB가 준비될 때까지 자동 재시작되도록 설정.
+
+### 4. GitHub Actions 배포 실패 (SSH 접속 Timeout)
 - **문제:** GitHub Actions 워크플로우 실행 중 `Connect to EC2 and Deploy` 단계에서 로그가 멈춰있다가, 결국 시간 초과(Timeout) 또는 `dial tcp ... i/o timeout` 에러로 실패함.
 - **해결:** AWS EC2의 **보안 그룹(Security Group)** 설정에서 SSH(22번 포트) 접근 권한이 **'내 IP (My IP)'**로만 제한되어 있었음.  
   AWS 콘솔에서 해당 인스턴스의 보안 그룹 인바운드 규칙을 수정하여 GitHub Actions의 접근을 허용함.
   - **수정 전:** `SSH (22)` | 소스: `내 IP`
   - **수정 후:** `SSH (22)` | 소스: `0.0.0.0/0`
-
-### 4. GitHub Actions 배포 실패 (SSH 접속 Timeout)
-
-- **문제:**
-  EC2 배포 후 웹 사이트(`:3000`) 접속 시, 개발자 도구(Console)에 다음과 같은 CORS 에러가 발생하며 데이터 조회가 불가능.
-  ```text
-  (index):1 Access to fetch at '[http://43.201.xx.xx:8080/api/guestbooks](http://43.201.xx.xx:8080/api/guestbooks)' from origin ... has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present...
-  ```
